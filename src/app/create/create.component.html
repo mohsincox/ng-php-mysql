@@ -1,0 +1,11 @@
+<div class="container">
+  <h2>Division Add</h2>
+  <!-- <p *ngIf="isAdded">Added Successfully</p> -->
+  <form #divisionAddForm="ngForm" (ngSubmit)="onClickSubmitToAdd(divisionAddForm.value)">
+    <div class="form-group">
+      <label for="name">Division Name:</label>
+      <input type="text" class="form-control" id="name" placeholder="Enter Division Name" name="name" ngModel>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

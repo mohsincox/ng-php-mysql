@@ -1,0 +1,14 @@
+<div class="container">
+  <h2>Division Update</h2>
+  <!-- <p *ngIf="isAdded">Added Successfully</p> -->
+  <form #divisionUpdateForm="ngForm" (ngSubmit)="onClickSubmitToUpdate(divisionUpdateForm.value)">
+    <div class="form-group">
+      <label for="name">Division Name:</label>
+      <span *ngFor="let division of divisions">
+        <input type="hidden" class="form-control" id="id" placeholder="Enter Division id" name="id" ngModel="{{ division.id }}">
+        <input type="text" class="form-control" id="name" placeholder="Enter Division Name" name="name" ngModel="{{ division.name }}">
+      </span>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
